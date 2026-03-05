@@ -14,15 +14,23 @@
   --text:#f0e8d4;--muted:#9a8a6a;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
-html,body{width:100%;height:100%;overflow:hidden;font-family:'Cinzel',serif;}
+html,body{width:100%;height:100%;overflow:hidden;font-family:'Cinzel',serif;font-size:16px;}
 body{background:#0d0802;color:var(--text);user-select:none;}
 .screen{display:none;width:100%;height:100%;}
 .screen.active{display:flex;}
 
+
+/* ── CUSTOM CURSORS ── */
+body, #game-screen, #map, .ltile, .hbldg, .cbtn, .dcard { cursor: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%2740%27 viewBox=%270 0 40 40%27><g><rect x=%2710%27 y=%2722%27 width=%2720%27 height=%2713%27 rx=%275%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271.2%27/><rect x=%2711%27 y=%2719%27 width=%275%27 height=%276%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2719%27 y=%2718%27 width=%275%27 height=%277%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2726%27 y=%2719%27 width=%275%27 height=%276%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2715%27 y=%275%27 width=%276%27 height=%2716%27 rx=%273%27 fill=%27%23f5edd8%27 stroke=%27%23555%27 stroke-width=%271.2%27/><ellipse cx=%2718%27 cy=%277%27 rx=%272.2%27 ry=%271.4%27 fill=%27%23d4c8a8%27 stroke=%27%23777%27 stroke-width=%27.6%27/><line x1=%2718%27 y1=%279%27 x2=%2718%27 y2=%2718%27 stroke=%27%23bbb%27 stroke-width=%27.6%27 stroke-dasharray=%272,2%27/><rect x=%277%27 y=%2724%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27 transform=%27rotate(-15 9 28)%27/></g></svg>") 18 4, pointer; }
+.dtoken { cursor: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%2740%27 viewBox=%270 0 40 40%27><g><rect x=%2710%27 y=%2722%27 width=%2720%27 height=%2713%27 rx=%275%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271.2%27/><rect x=%2711%27 y=%2719%27 width=%275%27 height=%276%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2719%27 y=%2718%27 width=%275%27 height=%277%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2726%27 y=%2719%27 width=%275%27 height=%276%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2715%27 y=%275%27 width=%276%27 height=%2716%27 rx=%273%27 fill=%27%23f5edd8%27 stroke=%27%23555%27 stroke-width=%271.2%27/><ellipse cx=%2718%27 cy=%277%27 rx=%272.2%27 ry=%271.4%27 fill=%27%23d4c8a8%27 stroke=%27%23777%27 stroke-width=%27.6%27/><line x1=%2718%27 y1=%279%27 x2=%2718%27 y2=%2718%27 stroke=%27%23bbb%27 stroke-width=%27.6%27 stroke-dasharray=%272,2%27/><rect x=%277%27 y=%2724%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27 transform=%27rotate(-15 9 28)%27/></g></svg>") 18 4, pointer; }
+.dtoken:hover { cursor: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%2740%27 viewBox=%270 0 40 40%27><g><rect x=%279%27 y=%2720%27 width=%2722%27 height=%2714%27 rx=%275%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271.2%27/><rect x=%2710%27 y=%2715%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2716%27 y=%2713%27 width=%275%27 height=%279%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2722%27 y=%2714%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2727%27 y=%2716%27 width=%274%27 height=%277%27 rx=%272%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%277%27 y=%2722%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27 transform=%27rotate(-20 9 26)%27/><line x1=%2712.5%27 y1=%2717%27 x2=%2712.5%27 y2=%2720%27 stroke=%27%23bbb%27 stroke-width=%27.6%27/><line x1=%2718.5%27 y1=%2715%27 x2=%2718.5%27 y2=%2720%27 stroke=%27%23bbb%27 stroke-width=%27.6%27/><line x1=%2724.5%27 y1=%2716%27 x2=%2724.5%27 y2=%2720%27 stroke=%27%23bbb%27 stroke-width=%27.6%27/></g></svg>") 18 10, grab; }
+.dtoken[draggable='true']:active { cursor: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%2740%27 viewBox=%270 0 40 40%27><g><rect x=%279%27 y=%2720%27 width=%2722%27 height=%2714%27 rx=%275%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271.2%27/><rect x=%2710%27 y=%2715%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2716%27 y=%2713%27 width=%275%27 height=%279%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2722%27 y=%2714%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2727%27 y=%2716%27 width=%274%27 height=%277%27 rx=%272%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%277%27 y=%2722%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27 transform=%27rotate(-20 9 26)%27/><line x1=%2712.5%27 y1=%2717%27 x2=%2712.5%27 y2=%2720%27 stroke=%27%23bbb%27 stroke-width=%27.6%27/><line x1=%2718.5%27 y1=%2715%27 x2=%2718.5%27 y2=%2720%27 stroke=%27%23bbb%27 stroke-width=%27.6%27/><line x1=%2724.5%27 y1=%2716%27 x2=%2724.5%27 y2=%2720%27 stroke=%27%23bbb%27 stroke-width=%27.6%27/></g></svg>") 18 10, grabbing; }
+.mslot { cursor: url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 width=%2740%27 height=%2740%27 viewBox=%270 0 40 40%27><g><rect x=%2710%27 y=%2722%27 width=%2720%27 height=%2713%27 rx=%275%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271.2%27/><rect x=%2711%27 y=%2719%27 width=%275%27 height=%276%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2719%27 y=%2718%27 width=%275%27 height=%277%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2726%27 y=%2719%27 width=%275%27 height=%276%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27/><rect x=%2715%27 y=%275%27 width=%276%27 height=%2716%27 rx=%273%27 fill=%27%23f5edd8%27 stroke=%27%23555%27 stroke-width=%271.2%27/><ellipse cx=%2718%27 cy=%277%27 rx=%272.2%27 ry=%271.4%27 fill=%27%23d4c8a8%27 stroke=%27%23777%27 stroke-width=%27.6%27/><line x1=%2718%27 y1=%279%27 x2=%2718%27 y2=%2718%27 stroke=%27%23bbb%27 stroke-width=%27.6%27 stroke-dasharray=%272,2%27/><rect x=%277%27 y=%2724%27 width=%275%27 height=%278%27 rx=%272.5%27 fill=%27%23e8dfc8%27 stroke=%27%23555%27 stroke-width=%271%27 transform=%27rotate(-15 9 28)%27/></g></svg>") 18 4, pointer; }
+
 /* ══ SETUP — full screen centered ══ */
 #setup-screen{
   flex-direction:column;align-items:center;justify-content:center;
-  gap:1.2rem;padding:2rem;min-height:100vh;width:100vw;
+  gap:1.4rem;padding:2.5rem;min-height:100vh;width:100vw;
   background:radial-gradient(ellipse at 50% 40%,rgba(212,175,55,.08) 0%,transparent 60%),
     linear-gradient(160deg,#130b03 0%,#1a1008 50%,#110b02 100%);
 }
@@ -32,23 +40,23 @@ body{background:#0d0802;color:var(--text);user-select:none;}
   background:linear-gradient(135deg,var(--p1),var(--gold),var(--p2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   filter:drop-shadow(0 0 30px rgba(212,175,55,.3));}
-.tagline{color:var(--muted);font-size:.72rem;text-align:center;max-width:500px;line-height:1.6;}
+.tagline{color:var(--muted);font-size:.95rem;text-align:center;max-width:560px;line-height:1.6;}
 .setup-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;width:100%;max-width:680px;}
 .pcard{background:rgba(16,10,3,.97);border-radius:10px;padding:1.2rem;border:1px solid rgba(212,175,55,.1);}
 .pcard.p1c{border-color:rgba(232,118,58,.3);}
 .pcard.p2c{border-color:rgba(91,141,217,.3);}
-.pcard h3{font-family:'Cinzel Decorative',serif;font-size:.82rem;margin-bottom:.8rem;letter-spacing:.1em;}
+.pcard h3{font-family:'Cinzel Decorative',serif;font-size:1.1rem;margin-bottom:.8rem;letter-spacing:.1em;}
 .p1c h3{color:var(--p1);}
 .p2c h3{color:var(--p2);}
 .fl{margin-bottom:.55rem;}
-.fl label{display:block;font-size:.6rem;color:var(--muted);margin-bottom:.2rem;text-transform:uppercase;letter-spacing:.1em;}
-.fl input,.fl select{width:100%;background:rgba(0,0,0,.5);border:1px solid rgba(212,175,55,.12);border-radius:6px;padding:.45rem .65rem;color:var(--text);font-family:'Cinzel',serif;font-size:.76rem;}
+.fl label{display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;text-transform:uppercase;letter-spacing:.1em;}
+.fl input,.fl select{width:100%;background:rgba(0,0,0,.5);border:1px solid rgba(212,175,55,.12);border-radius:6px;padding:.55rem .75rem;color:var(--text);font-family:'Cinzel',serif;font-size:.95rem;}
 .fl input:focus,.fl select:focus{outline:none;border-color:var(--gold);}
 .fl select option{background:#160a02;}
-.hprev{background:rgba(0,0,0,.28);border-radius:6px;padding:.45rem;margin-top:.22rem;font-size:.62rem;color:var(--muted);min-height:46px;border:1px solid rgba(255,255,255,.04);}
-.hprev strong{color:var(--gold);display:block;margin-bottom:.14rem;font-size:.65rem;}
+.hprev{background:rgba(0,0,0,.28);border-radius:6px;padding:.55rem;margin-top:.22rem;font-size:.8rem;color:var(--muted);min-height:46px;border:1px solid rgba(255,255,255,.04);}
+.hprev strong{color:var(--gold);display:block;margin-bottom:.14rem;font-size:.88rem;}
 .setup-btns{display:flex;gap:.8rem;align-items:center;justify-content:center;}
-.btn{padding:.65rem 1.6rem;border:none;border-radius:50px;font-family:'Cinzel',serif;font-size:.82rem;cursor:pointer;transition:all .18s;letter-spacing:.05em;font-weight:700;}
+.btn{padding:.75rem 2rem;border:none;border-radius:50px;font-family:'Cinzel',serif;font-size:.95rem;cursor:pointer;transition:all .18s;letter-spacing:.05em;font-weight:700;}
 .btn:hover{transform:translateY(-2px);filter:brightness(1.14);}
 .btn:active{transform:translateY(0);}
 .btn-gold{background:linear-gradient(135deg,#9a7010,var(--gold),#dfc030);color:#180d00;box-shadow:0 4px 20px rgba(212,175,55,.3);}
@@ -63,33 +71,33 @@ body{background:#0d0802;color:var(--text);user-select:none;}
 /* ── HUD bar ── */
 .hud{
   position:absolute;top:0;left:0;right:0;z-index:200;
-  height:48px;display:flex;align-items:center;
-  padding:0 16px;gap:0;
+  height:58px;display:flex;align-items:center;
+  padding:0 20px;gap:0;
   background:linear-gradient(180deg,rgba(5,3,1,.99) 0%,rgba(5,3,1,.88) 100%);
-  border-bottom:1px solid rgba(212,175,55,.2);
+  border-bottom:1px solid rgba(212,175,55,.25);
 }
 /* Phase name left */
 .hud-phase-name{
   font-family:'Cinzel Decorative',serif;
-  font-size:clamp(.65rem,1.5vw,.9rem);
+  font-size:clamp(.9rem,2vw,1.3rem);
   color:var(--gold);letter-spacing:.08em;text-transform:uppercase;
   white-space:nowrap;min-width:200px;
 }
 /* Round + player center */
 .hud-center{
   flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;
-  font-size:clamp(.6rem,1.2vw,.78rem);color:var(--muted);white-space:nowrap;
+  font-size:clamp(.78rem,1.4vw,.95rem);color:var(--muted);white-space:nowrap;
 }
 .hud-center .hl{color:var(--text);font-weight:700;}
 /* Buttons right */
 .hud-right{display:flex;align-items:center;gap:8px;}
 .hbtn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:var(--text);
-  border-radius:6px;padding:4px 12px;cursor:pointer;font-family:'Cinzel',serif;font-size:.65rem;
+  border-radius:6px;padding:6px 16px;cursor:pointer;font-family:'Cinzel',serif;font-size:.82rem;
   transition:all .14s;white-space:nowrap;display:flex;align-items:center;gap:5px;}
 .hbtn:hover{background:rgba(255,255,255,.12);border-color:var(--gold);}
 .phase-btn{
   background:linear-gradient(135deg,#9a7010,var(--gold));color:#180d00;font-weight:700;
-  border:none;font-size:.72rem;padding:7px 18px;border-radius:7px;cursor:pointer;
+  border:none;font-size:.9rem;padding:9px 24px;border-radius:8px;cursor:pointer;
   font-family:'Cinzel Decorative',serif;transition:all .14s;white-space:nowrap;
   box-shadow:0 2px 12px rgba(212,175,55,.3);letter-spacing:.05em;
 }
@@ -124,25 +132,25 @@ body{background:#0d0802;color:var(--text);user-select:none;}
 /* Left block: hearth + name + hearts */
 .zone-left{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:3px;padding:6px 10px 6px 10px;
-  min-width:130px;flex-shrink:0;
+  gap:4px;padding:8px 14px;
+  min-width:160px;flex-shrink:0;
   border-right:1px solid rgba(255,255,255,.06);
 }
-.hbldg{width:88px;height:78px;cursor:pointer;transition:filter .18s;position:relative;}
+.hbldg{width:110px;height:96px;cursor:pointer;transition:filter .18s;position:relative;}
 .hbldg:hover{filter:brightness(1.2);}
 .hbldg.drop-ok{filter:brightness(1.3) drop-shadow(0 0 10px rgba(76,175,125,.8));cursor:copy;}
 .hbldg.atk-ok{filter:brightness(1.2) drop-shadow(0 0 10px rgba(224,82,82,.8));cursor:crosshair;}
-.hbldg svg{width:88px;height:76px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.6));}
-.hname-txt{font-size:.5rem;color:var(--gold);letter-spacing:.04em;text-align:center;line-height:1.2;max-width:120px;}
+.hbldg svg{width:110px;height:94px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.6));}
+.hname-txt{font-size:.7rem;color:var(--gold);letter-spacing:.04em;text-align:center;line-height:1.2;max-width:120px;}
 .hp-hearts{display:flex;gap:2px;flex-wrap:wrap;justify-content:center;max-width:120px;margin-top:1px;}
-.hrt{font-size:.7rem;line-height:1;}
+.hrt{font-size:.9rem;line-height:1;}
 .hrt.empty{filter:grayscale(1) opacity(.3);}
 
 /* Resource block under hearth (left side below zone) */
 /* We embed it inside zone-left */
 .res-mini{margin-top:3px;width:100%;background:rgba(0,0,0,.3);border-radius:5px;padding:4px 6px;}
-.res-mini .rtitle{font-size:.52rem;color:var(--muted);margin-bottom:3px;letter-spacing:.04em;}
-.res-row{display:flex;align-items:center;justify-content:space-between;font-size:.6rem;margin-bottom:1px;}
+.res-mini .rtitle{font-size:.72rem;color:var(--muted);margin-bottom:4px;letter-spacing:.04em;}
+.res-row{display:flex;align-items:center;justify-content:space-between;font-size:.78rem;margin-bottom:2px;}
 .res-lbl{color:var(--muted);}
 .res-val{color:var(--gold);font-weight:700;}
 
@@ -150,7 +158,7 @@ body{background:#0d0802;color:var(--text);user-select:none;}
 .zone-center{
   flex:1;display:flex;align-items:center;justify-content:center;
   gap:8px;padding:8px 12px;flex-wrap:wrap;
-  min-height:90px;
+  min-height:130px;
 }
 /* Drop highlight */
 .zone-center.drop-ok{background:rgba(76,175,125,.07);outline:1px solid rgba(76,175,125,.3);}
@@ -165,22 +173,22 @@ body{background:#0d0802;color:var(--text);user-select:none;}
 .dtoken.sel{transform:translateY(-7px) scale(1.14);z-index:30;filter:drop-shadow(0 0 8px rgba(212,175,55,.9));}
 .dtoken.drag-src{opacity:.35;}
 .dface{
-  width:52px;height:52px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;font-size:1.6rem;
-  border:2px solid rgba(255,255,255,.2);
-  box-shadow:0 3px 9px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.12);
+  width:68px;height:68px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:2.1rem;
+  border:2.5px solid rgba(255,255,255,.22);
+  box-shadow:0 4px 12px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.14);
   position:relative;
 }
 .dtoken.sel .dface{border-color:var(--gold);}
 .p1u .dface{background:radial-gradient(circle at 40% 35%,rgba(232,118,58,.9),rgba(184,78,21,.97));}
 .p2u .dface{background:radial-gradient(circle at 40% 35%,rgba(91,141,217,.9),rgba(45,95,168,.97));}
-.dtoken.ldr .dface::after{content:'★';position:absolute;top:-4px;right:-2px;font-size:.55rem;color:var(--gold);text-shadow:0 0 5px rgba(212,175,55,.9);}
-.sring{position:absolute;top:-5px;left:-4px;right:-4px;bottom:22px;border:2px dashed var(--gold);border-radius:50%;animation:spin 1.8s linear infinite;pointer-events:none;}
+.dtoken.ldr .dface::after{content:'★';position:absolute;top:-5px;right:-3px;font-size:.8rem;color:var(--gold);text-shadow:0 0 6px rgba(212,175,55,.9);}
+.sring{position:absolute;top:-5px;left:-5px;right:-5px;bottom:27px;border:2.5px dashed var(--gold);border-radius:50%;animation:spin 1.8s linear infinite;pointer-events:none;}
 @keyframes spin{to{transform:rotate(360deg)}}
-.dname{font-size:.46rem;color:rgba(255,255,255,.88);text-align:center;line-height:1.1;max-width:54px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.dhpbar{width:42px;height:3px;background:rgba(255,255,255,.14);border-radius:2px;overflow:hidden;}
+.dname{font-size:.72rem;color:rgba(255,255,255,.92);text-align:center;line-height:1.1;max-width:74px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.dhpbar{width:58px;height:5px;background:rgba(255,255,255,.14);border-radius:3px;overflow:hidden;}
 .dhpfill{height:100%;background:linear-gradient(90deg,#4caf7d,#8bc34a);border-radius:2px;}
-.rolepip{position:absolute;bottom:23px;right:-3px;font-size:.58rem;background:rgba(0,0,0,.72);border-radius:3px;padding:0 2px;line-height:1.5;}
+.rolepip{position:absolute;top:-4px;right:-3px;font-size:.68rem;background:rgba(0,0,0,.72);border-radius:3px;padding:0 2px;line-height:1.5;z-index:5;}
 
 /* ── CENTER OF MAP ── */
 /* Locations row + decks all in one horizontal layout */
@@ -188,27 +196,27 @@ body{background:#0d0802;color:var(--text);user-select:none;}
   position:absolute;left:0;right:0;
   top:50%;transform:translateY(-50%);
   display:flex;align-items:center;justify-content:center;
-  gap:10px;padding:0 12px;
+  gap:0;padding:0 12px;
   pointer-events:none;/* children re-enable */
 }
 /* Deck cards */
 .dcard{
-  width:80px;height:106px;border-radius:9px;cursor:pointer;pointer-events:all;
+  width:105px;height:140px;border-radius:9px;cursor:pointer;pointer-events:all;
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;
-  transition:all .18s;border:2px solid rgba(212,175,55,.28);flex-shrink:0;
-  box-shadow:3px 3px 0 rgba(0,0,0,.4),5px 5px 0 rgba(0,0,0,.28),7px 7px 0 rgba(0,0,0,.15);
+  transition:all .18s;border:2px solid rgba(200,190,170,.6);flex-shrink:0;
+  box-shadow:3px 3px 0 rgba(180,170,150,.4),5px 5px 0 rgba(180,170,150,.28),7px 7px 0 rgba(180,170,150,.15);
 }
-.dcard:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:3px 3px 0 rgba(0,0,0,.4),5px 5px 0 rgba(0,0,0,.28),0 -5px 22px rgba(212,175,55,.3);}
-.dcard.ddeck{background:linear-gradient(160deg,#2a1a08,#1a0e04);}
-.dcard.ldeck{background:linear-gradient(160deg,#0e2218,#081510);}
-.dcard-icon{font-size:1.9rem;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5));}
-.dcard-lbl{font-size:.5rem;color:var(--gold);text-align:center;letter-spacing:.04em;line-height:1.25;}
-.dcard-cnt{font-size:.44rem;color:var(--muted);}
-.dcard-cost{font-size:.42rem;color:rgba(232,118,58,.9);}
+.dcard:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:3px 3px 0 rgba(180,170,150,.4),5px 5px 0 rgba(180,170,150,.28),0 -5px 22px rgba(212,175,55,.4);}
+.dcard.ddeck{background:linear-gradient(160deg,#f5f0e8,#e8e0d0);}
+.dcard.ldeck{background:linear-gradient(160deg,#f0f4f8,#e0e8f0);}
+.dcard-icon{font-size:2.5rem;filter:drop-shadow(0 1px 2px rgba(0,0,0,.3));}
+.dcard-lbl{font-size:.7rem;color:#3a2800;text-align:center;letter-spacing:.04em;line-height:1.25;font-weight:700;}
+.dcard-cnt{font-size:.65rem;color:#5a4a2a;}
+.dcard-cost{font-size:.62rem;color:#b84e15;font-weight:600;}
 
 /* Location tiles */
 .ltile{
-  width:108px;height:116px;position:relative;cursor:pointer;pointer-events:all;
+  width:140px;height:150px;position:relative;cursor:pointer;pointer-events:all;
   border-radius:10px;overflow:hidden;flex-shrink:0;
   transition:transform .14s,filter .14s;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -218,9 +226,9 @@ body{background:#0d0802;color:var(--text);user-select:none;}
 .ltile.atk-ok{cursor:crosshair;}
 .ltile.atk-ok:hover{filter:brightness(1.2) drop-shadow(0 0 10px rgba(224,82,82,.7));}
 .ltile-bg{position:absolute;inset:0;border-radius:10px;border:2px solid rgba(255,255,255,.12);box-shadow:0 5px 18px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08);}
-.ltile-icon{font-size:2.2rem;position:relative;z-index:1;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5));}
-.ltile-name{font-size:.5rem;text-align:center;position:relative;z-index:1;color:rgba(255,255,255,.92);font-weight:600;padding:0 4px;line-height:1.2;margin-top:3px;}
-.ltile-prod{font-size:.56rem;position:relative;z-index:1;margin-top:2px;}
+.ltile-icon{font-size:2.8rem;position:relative;z-index:1;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5));}
+.ltile-name{font-size:.72rem;text-align:center;position:relative;z-index:1;color:rgba(255,255,255,.92);font-weight:600;padding:0 4px;line-height:1.2;margin-top:3px;}
+.ltile-prod{font-size:.72rem;position:relative;z-index:1;margin-top:2px;}
 .ltile-flag{position:absolute;top:4px;right:4px;z-index:2;width:16px;height:16px;border-radius:50%;border:1px solid rgba(255,255,255,.3);}
 .ltile-flag.p1{background:var(--p1);}
 .ltile-flag.p2{background:var(--p2);}
@@ -231,27 +239,57 @@ body{background:#0d0802;color:var(--text);user-select:none;}
 
 /* ── HINT BAR — center of screen above locations ── */
 .hint-bar{
-  position:absolute;left:50%;z-index:150;
+  position:absolute;left:50%;z-index:200;
   transform:translateX(-50%);
-  background:rgba(0,0,0,.55);
-  border:1px solid rgba(212,175,55,.3);
-  border-radius:22px;padding:5px 22px;
-  font-size:.68rem;color:var(--gold);
+  background:var(--gold);
+  border:none;
+  border-radius:24px;padding:7px 28px;
+  font-size:1rem;color:#1a0e00;font-weight:700;
   pointer-events:none;white-space:nowrap;
-  letter-spacing:.05em;transition:opacity .25s;
-  backdrop-filter:blur(2px);
+  letter-spacing:.04em;transition:opacity .25s;
+  box-shadow:0 3px 16px rgba(0,0,0,.45);
+  font-family:'Cinzel Decorative',serif;
 }
 .hint-bar.gone{opacity:0;}
+
+
+/* ── ACTIVE / INACTIVE player zones ── */
+.pzone.inactive-zone {
+  /* dim everything in inactive zone */
+}
+.pzone.inactive-zone .zone-center .dtoken {
+  opacity: 0.45;
+  filter: grayscale(0.5) brightness(0.7);
+  pointer-events: none; /* no hover, no click */
+  cursor: default !important;
+  transform: none !important;
+}
+.pzone.inactive-zone .zone-left .hbldg {
+  filter: brightness(0.7) grayscale(0.25);
+  /* Keep pointer-events so player can click enemy hearth to see info */
+}
+.pzone.inactive-zone .zone-left .res-mini {
+  opacity: 0.55;
+}
+.pzone.inactive-zone .zone-left .hp-hearts {
+  opacity: 0.6;
+}
+/* Active zone gets subtle glow border */
+.pzone.active-zone .zone-center {
+  box-shadow: inset 0 0 0 1px rgba(212,175,55,.18);
+}
+/* Active player name in HUD highlighted */
+.hud-who { text-shadow: 0 0 14px currentColor; }
 
 /* ── LOG — bottom right corner, small ── */
 .gamelog{
   position:absolute;right:12px;bottom:12px;z-index:150;
-  width:190px;background:rgba(3,2,1,.86);
+  width:240px;background:rgba(3,2,1,.86);
   border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;
 }
-.gamelog-hdr{padding:3px 8px;font-size:.5rem;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.05);letter-spacing:.07em;text-transform:uppercase;}
-.gamelog-body{padding:3px 8px;overflow-y:auto;max-height:105px;display:flex;flex-direction:column;gap:1px;}
-.le{font-size:.54rem;color:var(--muted);line-height:1.3;padding:1px 0;border-bottom:1px solid rgba(255,255,255,.03);}
+.gamelog-hdr{padding:5px 10px;font-size:.7rem;color:var(--muted);border-bottom:1px solid rgba(255,255,255,.05);letter-spacing:.07em;text-transform:uppercase;}
+.gamelog-body{padding:4px 10px;overflow-y:auto;max-height:150px;display:flex;flex-direction:column;gap:1px;}
+.le{font-size:.7rem;color:var(--muted);line-height:1.3;padding:1px 0;border-bottom:1px solid rgba(255,255,255,.03);}
 .le.success{color:#7dca9f;}
 .le.battle{color:#e08080;}
 .le.info{color:#8ab4d4;}
@@ -265,15 +303,16 @@ body{background:#0d0802;color:var(--text);user-select:none;}
   padding:8px;min-width:192px;max-width:238px;
   box-shadow:0 8px 38px rgba(0,0,0,.85);}
 .cmenu.hidden{display:none;}
-.cmtitle{font-family:'Cinzel Decorative',serif;font-size:.62rem;color:var(--gold);
+.cmenu{overflow-y:auto;}
+.cmtitle{font-family:'Cinzel Decorative',serif;font-size:.82rem;color:var(--gold);
   margin-bottom:6px;letter-spacing:.07em;border-bottom:1px solid rgba(212,175,55,.17);padding-bottom:4px;}
 .cbtn{display:flex;align-items:center;gap:7px;width:100%;padding:6px 8px;border:none;
   border-radius:6px;background:rgba(255,255,255,.04);cursor:pointer;color:var(--text);
-  font-family:'Cinzel',serif;font-size:.62rem;margin-bottom:3px;transition:all .13s;text-align:left;}
+  font-family:'Cinzel',serif;font-size:.82rem;margin-bottom:4px;transition:all .13s;text-align:left;}
 .cbtn:hover{background:rgba(212,175,55,.17);}
 .cbtn:last-child{margin-bottom:0;}
-.cbi{font-size:.95rem;flex-shrink:0;}
-.cbd{font-size:.52rem;color:var(--muted);display:block;margin-top:1px;}
+.cbi{font-size:1.2rem;flex-shrink:0;}
+.cbd{font-size:.68rem;color:var(--muted);display:block;margin-top:1px;}
 .cbtn.danger:hover{background:rgba(224,82,82,.18);}
 .cbtn.success:hover{background:rgba(76,175,125,.18);}
 
@@ -282,6 +321,26 @@ body{background:#0d0802;color:var(--text);user-select:none;}
   border:1px solid rgba(212,175,55,.22);border-radius:7px;padding:7px 9px;
   min-width:128px;font-size:.62rem;box-shadow:0 4px 20px rgba(0,0,0,.7);}
 .dtip.hidden{display:none;}
+
+
+/* Pip stats shown below name (no tooltip) */
+.dstats{font-size:.7rem;color:rgba(255,255,255,.82);text-align:center;line-height:1.3;display:flex;gap:6px;justify-content:center;margin-top:1px;}
+.dstats span{display:flex;align-items:center;gap:2px;}
+.dstats span{margin:0 2px;}
+/* Mission squad slot */
+.msquad{display:flex;align-items:center;gap:6px;padding:8px 12px;background:rgba(0,0,0,.18);border-radius:10px;border:1px solid rgba(212,175,55,.28);flex-wrap:wrap;flex-shrink:0;}
+.mslot{width:72px;height:72px;border-radius:50%;border:2.5px dashed rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;font-size:2rem;cursor:pointer;flex-shrink:0;position:relative;transition:border-color .15s,background .15s;}
+.mslot:hover,.mslot.drop-target{border-color:var(--gold);background:rgba(212,175,55,.1);}
+.mslot.filled{border-color:rgba(255,255,255,.3);}
+.mslot-x{position:absolute;top:-4px;right:-4px;width:18px;height:18px;border-radius:50%;background:rgba(224,82,82,.85);color:#fff;font-size:.6rem;display:flex;align-items:center;justify-content:center;cursor:pointer;font-family:sans-serif;line-height:1;border:1px solid rgba(255,255,255,.3);z-index:10;}
+.mslot-x:hover{background:var(--red);}
+
+.msquad .mslot.drag-over{border-color:var(--gold);background:rgba(212,175,55,.12);transform:scale(1.08);}
+
+.mleader-area{display:flex;align-items:flex-start;gap:4px;}
+.mleader-badge{font-size:.7rem;color:var(--gold);position:absolute;top:-16px;left:50%;transform:translateX(-50%);white-space:nowrap;background:none;padding:1px 4px;text-shadow:0 1px 4px rgba(0,0,0,.9),0 0 8px rgba(212,175,55,.5);}
+/* Override hover tooltip - stat block IS the tooltip now */
+.dtip{display:none !important;}
 
 /* ── DRAG GHOST ── */
 .dgh{position:fixed;pointer-events:none;z-index:9999;opacity:.8;
@@ -406,14 +465,14 @@ body{background:#0d0802;color:var(--text);user-select:none;}
 
     <!-- CENTER: decks + locations + hint -->
     <div class="map-center" id="map-center">
-      <div class="dcard ddeck" onclick="drawDonger()">
+      <div style="width:32px;flex-shrink:0"></div><div class="dcard ddeck" onclick="drawDonger()">
         <div class="dcard-icon">🐾</div>
         <div class="dcard-lbl" id="dc-dname">Donger<br>Pile</div>
         <div class="dcard-cnt" id="dc-dleft">Left: 30</div>
         <div class="dcard-cost" id="dc-dcost">Cost: 1 🍖</div>
       </div>
       <div id="locs-row" style="display:flex;gap:10px;align-items:center;pointer-events:all;"></div>
-      <div class="dcard ldeck" onclick="revealNewLoc()">
+      <div style="width:32px;flex-shrink:0"></div><div class="dcard ldeck" onclick="revealNewLoc()"><div style="width:32px;flex-shrink:0"></div>
         <div class="dcard-icon">🗺️</div>
         <div class="dcard-lbl" id="dc-lname">Location<br>Deck</div>
         <div class="dcard-cnt" id="dc-lleft">Left: 5</div>
@@ -422,7 +481,7 @@ body{background:#0d0802;color:var(--text);user-select:none;}
     </div>
 
     <!-- HINT BAR — above center row -->
-    <div class="hint-bar" id="hint-bar" style="top:calc(50% - 90px);">Click Dongers to select, drag or click to assign</div>
+    <div class="hint-bar" id="hint-bar" style="top:calc(50% - 140px);">Click Dongers to select, drag or click to assign</div>
 
     <!-- P1 zone (bottom) -->
     <div class="pzone p1zone" id="p1zone">
@@ -744,8 +803,8 @@ function initGame(p1n,p1h,p2n,p2h){
     iPile:[...ITEMS,...ITEMS,...ITEMS].sort(()=>Math.random()-.5),
     locDeck:ld, locs:sl,
     players:[
-      {name:p1n,color:'p1',hearth:h1,hp:h1.hp,maxHp:h1.hp,dongers:[mkD(true),mkD(),mkD(),mkD(),mkD()],snacks:3,items:[],used:{mis:false},hearthUsed:false},
-      {name:p2n,color:'p2',hearth:h2,hp:h2.hp,maxHp:h2.hp,dongers:[mkD(true),mkD(),mkD(),mkD(),mkD()],snacks:3,items:[],used:{mis:false},hearthUsed:false},
+      {name:p1n,color:'p1',hearth:h1,hp:h1.hp,maxHp:h1.hp,dongers:[mkD(true),mkD(),mkD(),mkD(),mkD()],snacks:3,items:[],used:{mis:false},hearthUsed:false,misLeaderId:null,misSquad:[]},
+      {name:p2n,color:'p2',hearth:h2,hp:h2.hp,maxHp:h2.hp,dongers:[mkD(true),mkD(),mkD(),mkD(),mkD()],snacks:3,items:[],used:{mis:false},hearthUsed:false,misLeaderId:null,misSquad:[]},
     ]};
 }
 
@@ -817,6 +876,17 @@ function renderHUD(){
 
 function renderZones(){
   G.players.forEach((p,pid)=>{
+    // Active/inactive zone styling
+    const zone=document.getElementById(`p${pid+1}zone`);
+    if(zone){
+      if(pid===G.cp){
+        zone.classList.add('active-zone');
+        zone.classList.remove('inactive-zone');
+      } else {
+        zone.classList.add('inactive-zone');
+        zone.classList.remove('active-zone');
+      }
+    }
     // SVG hearth
     document.getElementById(`p${pid+1}-hsvg`).innerHTML=buildSVG(p.hearth,p.hp,p.maxHp,p.color);
     document.getElementById(`p${pid+1}-hname`).textContent=HN(p.hearth);
@@ -859,18 +929,69 @@ function buildSVG(h,hp,maxHp,color){
 
 function renderDongers(p,pid){
   const ctr=document.getElementById(`p${pid+1}-center`);
-  // Keep drop-ok class if needed, only rebuild tokens
   const dropOk=ctr.classList.contains('drop-ok');
   ctr.innerHTML='';
   if(dropOk) ctr.classList.add('drop-ok');
+  const isCurPlayer=pid===G.cp;
+  // If this player has a mission leader, render mission squad panel first
+  if(isCurPlayer && p.misLeaderId && G.phase==='prep'){
+    const leader=p.dongers.find(d=>d.id===p.misLeaderId&&d.alive);
+    if(leader){
+      const msDiv=document.createElement('div');
+      msDiv.className='msquad';
+      msDiv.title='Mission Squad';
+      // Leader slot
+      const lSlot=document.createElement('div');
+      lSlot.className='mslot filled';
+      lSlot.style.border='2px solid var(--gold)';
+      lSlot.innerHTML=`<span style="font-size:2rem">${leader.emoji}</span>`;
+      const lx=document.createElement('div');lx.className='mslot-x';lx.textContent='×';
+      lx.onclick=e=>{e.stopPropagation();removeFromMisSquad(leader.id);};
+      lSlot.appendChild(lx);
+      msDiv.appendChild(lSlot);
+      // Member slots
+      for(let i=0;i<leader.leadership;i++){
+        const memberId=p.misSquad[i+1];
+        const slot=document.createElement('div');
+        if(memberId){
+          const mem=p.dongers.find(d=>d.id===memberId&&d.alive);
+          if(mem){
+            slot.className='mslot filled';
+            slot.innerHTML=`<span style="font-size:2rem">${mem.emoji}</span>`;
+            const sx=document.createElement('div');sx.className='mslot-x';sx.textContent='×';
+            sx.onclick=e=>{e.stopPropagation();removeFromMisSquad(mem.id);};
+            slot.appendChild(sx);
+          } else {
+            slot.className='mslot';slot.innerHTML='<span style="font-size:1.5rem;opacity:.4">+</span>';
+            slot.onclick=e=>{e.stopPropagation();fillSlotRandom();};
+          }
+        } else {
+          slot.className='mslot';slot.innerHTML='<span style="font-size:1.5rem;opacity:.4">+</span>';
+          slot.onclick=e=>{e.stopPropagation();fillSlotRandom();};
+          slot.ondragover=e=>{e.preventDefault();slot.style.borderColor='var(--gold)';};
+          slot.ondragleave=()=>{slot.style.borderColor='';};
+          slot.ondrop=e=>{e.preventDefault();slot.classList.remove('drag-over');if(dragId)addToMisSquad(dragId);};
+        }
+        msDiv.appendChild(slot);
+      }
+      // Separator
+      const sep=document.createElement('div');sep.style.cssText='width:1px;height:60px;background:rgba(255,255,255,.12);margin:0 4px;flex-shrink:0';
+      msDiv.appendChild(sep);
+      ctr.appendChild(msDiv);
+    }
+  }
   p.dongers.filter(d=>d.alive).forEach(d=>{
+    // Skip mission leader — they appear in squad panel, not main list
+    if(isCurPlayer && p.misLeaderId===d.id && G.phase==='prep') return;
+    // Skip squad members too (they show in slots)
+    if(isCurPlayer && p.misSquad && p.misSquad.includes(d.id) && d.id!==p.misLeaderId && G.phase==='prep') return;
     const isSel=sel.includes(d.id), isCur=pid===G.cp;
     const el=document.createElement('div');
     el.className=`dtoken ${p.color==='p1'?'p1u':'p2u'}${d.isLeader?' ldr':''}${isSel?' sel':''}`;
-    const rp=d.role==='guard'?'🛡️':d.role==='expedition'?'🗺️':d.role==='mission'?'⚔️':'';
-    el.innerHTML=`${isSel?'<div class="sring"></div>':''}<div class="dface">${d.emoji}${rp?`<div class="rolepip">${rp}</div>`:''}</div><div class="dname">${d.name}${d.isLeader?' ★':''}</div><div class="dhpbar"><div class="dhpfill" style="width:${d.hp/d.maxHp*100}%"></div></div>`;
+    const rp=d.role==='guard'?'🛡️':d.role==='expedition'?'🗺️':'';
+    const leaderBadge = d.isLeader?`<div class="mleader-badge">👑 ${d.leadership}</div>`:'';
+    el.innerHTML=`${isSel?'<div class="sring"></div>':''}${leaderBadge}<div class="dface">${d.emoji}${rp?`<div class="rolepip">${rp}</div>`:''}</div><div class="dname">${d.name}</div><div class="dhpbar"><div class="dhpfill" style="width:${d.hp/d.maxHp*100}%"></div></div><div class="dstats"><span>⚔️ ${d.atk}</span><span>❤️ ${d.hp}/${d.maxHp}</span></div>`;
     if(isCur){el.onclick=e=>{e.stopPropagation();onDclick(d.id,pid,e);};el.draggable=true;el.ondragstart=e=>startDrag(e,d.id,pid);el.ondragend=endDrag;}
-    el.onmouseenter=e=>showTip(d,e);el.onmouseleave=hideTip;
     ctr.appendChild(el);
   });
 }
@@ -910,14 +1031,8 @@ function renderHint(){
 /* ═══════════════════════════════════
    TOOLTIP
 ═══════════════════════════════════ */
-function showTip(d,e){
-  const t=document.getElementById('dtip');
-  t.innerHTML=`<div style="color:var(--gold);font-weight:700;margin-bottom:2px">${d.emoji} ${d.name}${d.isLeader?' ★':''}</div>⚔️ ATK:${d.atk} ❤️ ${d.hp}/${d.maxHp}${d.isLeader?`<br>👑 ${d.leadership}`:''}`;
-  t.classList.remove('hidden');
-  t.style.left=Math.min(e.clientX+12,window.innerWidth-145)+'px';
-  t.style.top=Math.max(e.clientY-62,52)+'px';
-}
-function hideTip(){document.getElementById('dtip').classList.add('hidden');}
+function showTip(d,e){}
+function hideTip(){}
 
 /* ═══════════════════════════════════
    DRAG & DROP
@@ -936,7 +1051,26 @@ function mvGhost(e){const g=document.getElementById('dgh');g.style.left=e.client
 function onDropLoc(li){if(dragId){sendSel(li);endDrag();}}
 function onDropZone(pid){
   if(!dragId)return;
-  if(pid===G.cp&&G.phase==='prep'){sel.forEach(did=>role(did,'guard'));log(`${G.players[G.cp].name}: ${T('guard')}`,'info');sel=[];}
+  if(pid===G.cp&&G.phase==='prep'){
+    sel.forEach(did=>role(did,'guard'));
+    log(`${G.players[G.cp].name}: ${T('guard')}`,'info');sel=[];
+  } else if(pid!==G.cp&&G.phase==='prep'){
+    // Dragging to enemy zone → assign as mission leader if leader
+    const p=G.players[G.cp];
+    const d=p.dongers.find(x=>x.id===dragId);
+    if(d&&d.isLeader&&!p.misLeaderId){
+      role(dragId,'mission');
+      log(`${p.name}: ${d.name} leads Mission!`,'info');
+    } else if(d&&d.isLeader&&p.misLeaderId){
+      showAlert(T('leadMis'),'Already have a mission leader this turn.');
+    } else if(d&&!d.isLeader&&p.misLeaderId){
+      addToMisSquad(dragId);
+    }
+    sel=[];
+  } else if(pid!==G.cp&&G.phase==='action'){
+    // Drag to enemy hearth in action = attack
+    doAtkH(sel.length>0?sel:[dragId]);
+  }
   endDrag();renderAll();
 }
 
@@ -958,6 +1092,11 @@ function showDM(did,e){
     btns.push({i:'🏠',l:T('stayHome'),d:T('stayHomeD'),c:'',f:()=>{role(did,'home');hideCM();}});
     btns.push({i:'🛡️',l:T('guard'),d:T('guardD'),c:'success',f:()=>{role(did,'guard');hideCM();}});
     if(d.isLeader)btns.push({i:'⚔️',l:T('leadMis'),d:T('misLP',d.leadership),c:'danger',f:()=>{role(did,'mission');hideCM();}});
+    else if(p.misLeaderId&&!p.misSquad.includes(did)){
+      const leader=p.dongers.find(x=>x.id===p.misLeaderId);
+      if(leader&&p.misSquad.length<leader.leadership+1)
+        btns.push({i:'⚔️',l:'Join Mission',d:'Add to mission squad',c:'danger',f:()=>{addToMisSquad(did);hideCM();}});
+    }
     G.locs.forEach((loc,li)=>{const isEn=loc.owner&&loc.owner!==p.color;btns.push({i:loc.icon,l:isEn?T('raid',LN(loc)):T('expTo',LN(loc)),d:`+${loc.amount}${loc.produces}`,c:isEn?'danger':'',f:()=>{sendSel(li);hideCM();}});});
   } else if(G.phase==='action'){
     btns.push({i:'⚔️',l:T('atkH',opp.name),d:`HP:${opp.hp}`,c:'danger',f:()=>{doAtkH(sel);hideCM();}});
@@ -1015,8 +1154,15 @@ function showCM(title,btns,e){
   document.getElementById('cmtitle').textContent=title;
   const bc=document.getElementById('cmbtns');bc.innerHTML='';
   btns.forEach(b=>{const btn=document.createElement('button');btn.className=`cbtn ${b.c||''}`;btn.innerHTML=`<span class="cbi">${b.i}</span><span><span>${b.l}</span>${b.d?`<span class="cbd">${b.d}</span>`:''}</span>`;btn.onclick=b.f;bc.appendChild(btn);});
-  const x=Math.min(e.clientX,window.innerWidth-242),y=Math.min(e.clientY,window.innerHeight-(btns.length*38+65));
-  m.style.left=Math.max(4,x)+'px';m.style.top=Math.max(52,y)+'px';m.classList.remove('hidden');
+  const menuH=btns.length*46+70;
+  const safeBottom=window.innerHeight-60; // leave 60px for taskbar
+  const rawY=e.clientY;
+  const x=Math.min(e.clientX,window.innerWidth-310);
+  const y=Math.min(rawY, safeBottom-menuH);
+  m.style.left=Math.max(4,x)+'px';
+  m.style.top=Math.max(62,y)+'px';
+  m.style.maxHeight=(safeBottom-Math.max(62,y))+'px';
+  m.style.overflowY='auto';m.classList.remove('hidden');
 }
 function hideCM(){document.getElementById('cmenu').classList.add('hidden');}
 
@@ -1028,6 +1174,56 @@ function role(did,r){
   const p=G.players[G.cp],d=p.dongers.find(x=>x.id===did);if(!d||!d.alive)return;
   G.locs.forEach(l=>{if(l.workers[p.color])l.workers[p.color]=l.workers[p.color].filter(w=>w.id!==did);});
   d.role=r;
+  if(r==='mission'&&d.isLeader){
+    p.misLeaderId=did;
+    p.misSquad=[did];
+  } else if(r!=='mission'){
+    // if removing leader from mission, clear squad
+    if(p.misLeaderId===did){p.misLeaderId=null;p.misSquad=[];}
+    // if removing squad member
+    else{p.misSquad=p.misSquad.filter(id=>id!==did);}
+  }
+  renderAll();
+}
+
+function addToMisSquad(did){
+  const p=G.players[G.cp];
+  if(!p.misLeaderId)return;
+  const leader=p.dongers.find(d=>d.id===p.misLeaderId);
+  if(!leader)return;
+  const maxSlots=leader.leadership;
+  if(p.misSquad.length>=maxSlots+1)return; // +1 for leader itself
+  if(p.misSquad.includes(did))return;
+  const d=p.dongers.find(x=>x.id===did);if(!d||!d.alive)return;
+  G.locs.forEach(l=>{if(l.workers[p.color])l.workers[p.color]=l.workers[p.color].filter(w=>w.id!==did);});
+  d.role='mission';
+  p.misSquad.push(did);
+  renderAll();
+}
+
+function removeFromMisSquad(did){
+  const p=G.players[G.cp];
+  if(did===p.misLeaderId){
+    // Remove leader = clear whole mission
+    p.dongers.filter(d=>p.misSquad.includes(d.id)).forEach(d=>{d.role='home';});
+    p.misLeaderId=null;p.misSquad=[];
+  } else {
+    p.misSquad=p.misSquad.filter(id=>id!==did);
+    const d=p.dongers.find(x=>x.id===did);if(d)d.role='home';
+  }
+  renderAll();
+}
+
+function fillSlotRandom(){
+  const p=G.players[G.cp];
+  if(!p.misLeaderId)return;
+  const leader=p.dongers.find(d=>d.id===p.misLeaderId);if(!leader)return;
+  const maxSlots=leader.leadership;
+  if(p.misSquad.length>=maxSlots+1)return;
+  const avail=p.dongers.filter(d=>d.alive&&!p.misSquad.includes(d.id)&&d.role==='home');
+  if(avail.length===0)return;
+  const pick=avail[~~(Math.random()*avail.length)];
+  addToMisSquad(pick.id);
 }
 function sendSel(li){
   if(G.phase!=='prep'){showAlert(T('wrongPhase'),T('wrongPhaseM'));return;}
@@ -1090,15 +1286,19 @@ function doTend(){
       else log(`Birth 🎲${r} miss`,'info');}}
   p.hearthUsed=true;renderAll();checkWin();
 }
+function getMisSquad(p){
+  if(p.misSquad&&p.misSquad.length>0) return p.dongers.filter(d=>p.misSquad.includes(d.id)&&d.alive);
+  return p.dongers.filter(d=>d.alive&&d.role==='mission');
+}
 function pickAtkH(){
-  const p=G.players[G.cp],mis=p.dongers.filter(d=>d.alive&&d.role==='mission');
-  const atk=sel.length>0?p.dongers.filter(d=>sel.includes(d.id)&&d.alive):mis;
+  const p=G.players[G.cp];
+  const atk=sel.length>0?p.dongers.filter(d=>sel.includes(d.id)&&d.alive):getMisSquad(p);
   if(atk.length===0){showAlert(T('noMis'),T('noMisM'));return;}
   doAtkH(atk.map(d=>d.id));
 }
 function pickSneak(){
   const p=G.players[G.cp];
-  const atk=sel.length>0?p.dongers.filter(d=>sel.includes(d.id)&&d.alive):p.dongers.filter(d=>d.alive&&d.role==='mission');
+  const atk=sel.length>0?p.dongers.filter(d=>sel.includes(d.id)&&d.alive):getMisSquad(p);
   if(atk.length===0){showAlert(T('noMis'),T('noMisM'));return;}
   doSneak(atk.map(d=>d.id));
 }
@@ -1216,7 +1416,7 @@ function doRec(){
   });
   if(p.hearth.id==='hey_barn'&&p.snacks>0){p.snacks++;log('Hey Barn +1🍖','success');}
   p.items.filter(i=>i.effect==='snack_prod').forEach(()=>p.snacks++);
-  p.hearthUsed=false;p.used={mis:false};
+  p.hearthUsed=false;p.used={mis:false};p.misLeaderId=null;p.misSquad=[];
   log(`${p.name}: ${T('rec')}`,'info');renderAll();checkWin();
 }
 function endTurn(){
